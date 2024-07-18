@@ -4,6 +4,10 @@
   "homepage": "https://hsk-kr.github.io/react-fabricjs-example",
   "private": true,
   "dependencies": {
+    "@nextui-org/button": "^2.0.35",
+    "@nextui-org/system": "^2.2.3",
+    "@nextui-org/theme": "^2.2.7",
+    "@nextui-org/tooltip": "^2.0.37",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -12,8 +16,10 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "fabric": "^5.2.4",
+    "framer-motion": "^11.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
