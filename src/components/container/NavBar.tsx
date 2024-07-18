@@ -6,7 +6,7 @@ import { Tooltip } from "@nextui-org/tooltip";
 import { BiUndo } from "react-icons/bi";
 import { BiRedo } from "react-icons/bi";
 import { useData } from "../Context";
-import { useRef } from "react";
+// import { useRef } from "react";
 import { FaDownload } from "react-icons/fa";
 
 const NavBar = ({
@@ -17,7 +17,7 @@ const NavBar = ({
 //   handleImageUpload,
 }: any) => {
   const { setTextColor, textColor } = useData();
-  const imageUpload = useRef<HTMLInputElement>(null);
+//   const imageUpload = useRef<HTMLInputElement>(null);
 //   const handleClickImg = () => {
 //     imageUpload.current?.click();
 //   };

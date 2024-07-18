@@ -145,7 +145,75 @@ const Main = () => {
     >
       <Tabs />
       <TabContent addText={addText} handleOnChange={handleFileChange} />
-      
+      <div className="col-span-8 md:row-span-12 bg-gray-200 row-span-11 flex flex-col items-center w-full">
+        <NavBar
+          downloadPng={downloadCanvasAsImage}
+          removeSelectedObject={removeSelectedObject}
+        />
+        <Paint
+          ref={canvasEl}
+          bgImgSrc={bgImgSrc}
+          canvas={canvas}
+          // drawMode={drawMode}
+          // penColor={penColor}
+          // readonly={readonly}
+          // onDrawEnd={handleCanvasDrawEnd}
+        />
+        {/* <div className="flex p-5 justify-between items-center w-full">
+          <div className="flex flex-col gap-y-2">
+            <div className="flex gap-x-2">
+              <Button onClick={handleUploadImageClick}>Upload Image</Button>
+              <Button onClick={downloadCanvasAsImage}>Download Canvas</Button>
+              <input
+                type="file"
+                className="hidden"
+                ref={fileEl}
+                onChange={handleFileChange}
+              />
+            </div>
+            <div className="flex gap-x-2">
+              <Button onClick={handleJSONImport}>Import JSON</Button>
+              <Button onClick={handleJSONExport}>Export as JSON</Button>
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-2 self-start">
+            <div className="flex gap-x-2">
+              <Button onClick={handleDrawModeChange("RECT")}>Rect</Button>
+              <Button onClick={handleDrawModeChange("ELLIPSE")}>Ellipse</Button>
+              <Button onClick={handleDrawModeChange("TEXT_S")}>Text(S)</Button>
+              <Button onClick={handleDrawModeChange("TEXT_L")}>Text(L)</Button>
+            </div>
+            <div className="flex gap-x-2">
+              <ColorButton
+                color="ORANGE"
+                onClick={handlePenColorChange("ORANGE")}
+                selected={penColor === "ORANGE"}
+              />
+              <ColorButton
+                color="GREEN"
+                onClick={handlePenColorChange("GREEN")}
+                selected={penColor === "GREEN"}
+              />
+              <ColorButton
+                color="PURPLE"
+                onClick={handlePenColorChange("PURPLE")}
+                selected={penColor === "PURPLE"}
+              />
+              <Button onClick={rotateBackgroundImage}>Rotate</Button>
+              <div className="flex items-end">
+                <span className="mr-2">Readonly:</span>
+                <Checkbox checked={readonly} onChange={handleReadonlyChange} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-1024">
+          <textarea
+            ref={textAreaEl}
+            className="w-full h-16 border border-gray-500 resize-none"
+          />
+        </div> */}
+      </div>
     </div>
   );
 };
