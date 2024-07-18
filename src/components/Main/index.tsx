@@ -22,9 +22,9 @@ const Main = () => {
 
   const { textColor } = useData();
 
-  const handleDrawModeChange = (drawMode: CanvasDrawMode) => () => {
-    setDrawMode(drawMode);
-  };
+  // const handleDrawModeChange = (drawMode: CanvasDrawMode) => () => {
+  //   setDrawMode(drawMode);
+  // };
 
   const addText = () => {
     if (!canvas) return;
@@ -58,13 +58,13 @@ const Main = () => {
     reader.readAsDataURL(file);
   };
 
-  const handlePenColorChange = (penColor: PenColor) => () => {
-    setPenColor(penColor);
-  };
+  // const handlePenColorChange = (penColor: PenColor) => () => {
+  //   setPenColor(penColor);
+  // };
 
-  const handleReadonlyChange = () => {
-    setReadonly((prevReadOnly) => !prevReadOnly);
-  };
+  // const handleReadonlyChange = () => {
+  //   setReadonly((prevReadOnly) => !prevReadOnly);
+  // };
 
   const removeSelectedObject = () => {
     if (!canvas) return;
@@ -72,14 +72,14 @@ const Main = () => {
     canvas.renderAll();
   };
 
-  const rotateBackgroundImage = () => {
-    if (!canvas?.backgroundImage) return;
+  // const rotateBackgroundImage = () => {
+  //   if (!canvas?.backgroundImage) return;
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const backgroundImage: any = canvas.backgroundImage;
-    backgroundImage.rotate((backgroundImage.angle + 90) % 360);
-    canvas.renderAll();
-  };
+  //   // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  //   const backgroundImage: any = canvas.backgroundImage;
+  //   backgroundImage.rotate((backgroundImage.angle + 90) % 360);
+  //   canvas.renderAll();
+  // };
 
   const downloadCanvasAsImage = () => {
     if (!canvas) return;
@@ -95,21 +95,21 @@ const Main = () => {
     a.remove();
   };
 
-  const handleJSONImport = () => {
-    if (!canvas || !textAreaEl.current) return;
+  // const handleJSONImport = () => {
+  //   if (!canvas || !textAreaEl.current) return;
 
-    const json = JSON.parse(textAreaEl.current.value);
-    canvas.loadFromJSON(json, () => {
-      canvas.renderAll();
-    });
-  };
+  //   const json = JSON.parse(textAreaEl.current.value);
+  //   canvas.loadFromJSON(json, () => {
+  //     canvas.renderAll();
+  //   });
+  // };
 
-  const handleJSONExport = () => {
-    if (!canvas || !textAreaEl.current) return;
+  // const handleJSONExport = () => {
+  //   if (!canvas || !textAreaEl.current) return;
 
-    const json = JSON.stringify(canvas.toJSON());
-    textAreaEl.current.value = json;
-  };
+  //   const json = JSON.stringify(canvas.toJSON());
+  //   textAreaEl.current.value = json;
+  // };
 
   useEffect(() => {
     const canvas = new fabric.Canvas(canvasEl.current);

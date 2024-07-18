@@ -2,7 +2,7 @@
 import { Button } from "@nextui-org/button";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { Tooltip } from "@nextui-org/tooltip";
-import { IoCloudUpload } from "react-icons/io5";
+// import { IoCloudUpload } from "react-icons/io5";
 import { BiUndo } from "react-icons/bi";
 import { BiRedo } from "react-icons/bi";
 import { useData } from "../Context";
@@ -14,13 +14,13 @@ const NavBar = ({
   downloadPng,
   undo,
   redo,
-  handleImageUpload,
+//   handleImageUpload,
 }: any) => {
   const { setTextColor, textColor } = useData();
   const imageUpload = useRef<HTMLInputElement>(null);
-  const handleClickImg = () => {
-    imageUpload.current?.click();
-  };
+//   const handleClickImg = () => {
+//     imageUpload.current?.click();
+//   };
 
   return (
     <div className="w-full h-[50px] flex bg-white border-b border-slate-300">

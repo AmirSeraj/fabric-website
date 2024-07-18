@@ -1,5 +1,5 @@
 import { Button } from "@nextui-org/button";
-import { ChangeEventHandler, useRef, useState } from "react";
+import { ChangeEventHandler, useRef } from "react";
 import { PiWarningCircleLight } from "react-icons/pi";
 
 const Upload = ({
