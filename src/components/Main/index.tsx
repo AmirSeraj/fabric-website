@@ -18,13 +18,13 @@ const Main = () => {
   const canvasEl = useRef<HTMLCanvasElement>(null);
   const [bgImgSrc, setBgImgSrc] = useState<string>();
   // const fileEl = useRef<HTMLInputElement>(null);
-  const textAreaEl = useRef<HTMLTextAreaElement>(null);
+  // const textAreaEl = useRef<HTMLTextAreaElement>(null);
 
   const { textColor } = useData();
 
-  // const handleDrawModeChange = (drawMode: CanvasDrawMode) => () => {
-  //   setDrawMode(drawMode);
-  // };
+  const handleDrawModeChange = (drawMode: CanvasDrawMode) => () => {
+    setDrawMode(drawMode);
+  };
 
   const addText = () => {
     if (!canvas) return;
@@ -154,10 +154,10 @@ const Main = () => {
           ref={canvasEl}
           bgImgSrc={bgImgSrc}
           canvas={canvas}
-          drawMode={drawMode}
-          penColor={penColor}
-          readonly={readonly}
-          onDrawEnd={handleCanvasDrawEnd}
+          // drawMode={drawMode}
+          // penColor={penColor}
+          // readonly={readonly}
+          // onDrawEnd={handleCanvasDrawEnd}
         />
         {/* <div className="flex p-5 justify-between items-center w-full">
           <div className="flex flex-col gap-y-2">
